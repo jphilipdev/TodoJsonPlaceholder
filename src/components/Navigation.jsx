@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LoggedInUser from './LoggedInUser';
-import ToDoList from './ToDoList';
+import ToDoListContainer from '../containers/ToDoListContainer';
 import NewListCreator from './NewListCreator';
 
 export default class Navigation extends Component {
@@ -9,7 +9,7 @@ export default class Navigation extends Component {
         return (
             <div className={this.props.className}>
                 <LoggedInUser />
-                <ToDoList />
+                <ToDoListContainer />
                 <NewListCreator />
             </div>
         )

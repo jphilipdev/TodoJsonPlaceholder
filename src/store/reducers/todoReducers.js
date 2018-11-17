@@ -1,6 +1,6 @@
 import { TODOS_UPDATED } from '../actions/types';
 
-const intialState = {
+const initialState = {
     todos: []
 };
 
