@@ -1,9 +1,12 @@
 import { connect } from 'react-redux';
 import ToDoList from '../components/ToDoList';
-import updateTodos from '../store/reducers/todoReducers';
+import { loadTodos } from '../store/actions/todoActions';
 
 const mapStateToProps = state => ({
-   todos: state.todos 
+   todos: state.todos.todos
 });
 
-export default connect(mapStateToProps, { updateTodos })(ToDoList);
+export default connect(
+   mapStateToProps,
+   { loadTodos }
+)(ToDoList);

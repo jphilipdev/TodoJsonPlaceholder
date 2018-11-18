@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Navigation from './Navigation';
 import ToDoManager from './ToDoManager';
 import Footer from './Footer';
-import { loadTodos } from '../store/actions/todoActions';
 
 const LayoutWrapper = styled.div`
     display: flex;
@@ -20,10 +19,6 @@ const LeftNavigation = styled(Navigation)`
 `;
 
 export default class Layout extends Component {
-
-    componentDidMount() {
-        loadTodos();
-    }
 
     render() {
         return (
