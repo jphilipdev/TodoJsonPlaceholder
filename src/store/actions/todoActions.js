@@ -11,10 +11,3 @@ export const loadTodos = () => dispatch => {
             });
         });
 }
-
-// export const updateTodos = todos => dispatch => {
-//     dispatch({
-//         type: TODOS_UPDATED,
-//         payload: todos
-//     });
-//}

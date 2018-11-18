@@ -13,6 +13,13 @@ export default class ToDoList extends Component {
     }
 
     render() {
-        return <div>ToDoList</div>;
+        return (
+            <div>
+                {this.props.todos.slice(0, 5).map(todo => (
+                        <div>{todo.title}</div>
+                    )
+                )}
+            </div>
+        )
     }
 }
