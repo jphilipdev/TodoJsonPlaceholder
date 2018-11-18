@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LoggedInUser from './LoggedInUser';
 import ToDoListContainer from '../containers/ToDoListContainer';
-import NewListCreator from './NewListCreator';
+import NewListCreatorContainer from '../containers/NewListCreatorContainer';
 
 export default class Navigation extends Component {
 
@@ -10,7 +10,7 @@ export default class Navigation extends Component {
             <div className={this.props.className}>
                 <LoggedInUser />
                 <ToDoListContainer />
-                <NewListCreator />
+                <NewListCreatorContainer />
             </div>
         )
     }

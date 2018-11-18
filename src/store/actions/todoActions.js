@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { TODOS_UPDATED } from './types';
+import { TODOS_UPDATED, ADD_TODO } from './types';
 
 
 export const loadTodos = () => dispatch => {
@@ -10,4 +10,11 @@ export const loadTodos = () => dispatch => {
                 payload: response.data
             });
         });
+}
+
+export const addTodo = (title) => dispatch => {
+    dispatch({
+        type: ADD_TODO,
+        payload: title
+    })
 }
