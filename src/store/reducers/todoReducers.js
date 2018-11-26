@@ -10,12 +10,24 @@ export default function (state = initialState, action) {
         case TODOS_UPDATED:
             return {
                 ...state,
-                todos: action.payload
+                todos: action.payload.slice(0, 5)
             };
         case ADD_TODO:
+
+            const todos = [...state.todos];
+            
+            const maxTodoId = Math.max(...todos.map(todos => todos.id));
+
+            todos.push({
+                userId: 2,
+                id: maxTodoId + 1,
+                title: action.payload,
+                completed: true
+            });
+
             return {
                 ...state,
-                title: action.payload
+                todos
             }
         default:
             return state;

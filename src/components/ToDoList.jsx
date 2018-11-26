@@ -15,7 +15,7 @@ export default class ToDoList extends Component {
     render() {
         return (
             <div>
-                {this.props.todos.slice(0, 5).map(todo => (
+                {this.props.todos.map(todo => (
                         <div key={todo.id}>{todo.title}</div>
                     )
                 )}
