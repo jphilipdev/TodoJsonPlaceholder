@@ -7,7 +7,7 @@ export default class ToDoManager extends Component {
         return (
             <div>
                 <Header />
-                <div>ToDoManager</div>
+                <div>{this.props.todo.title}</div>
             </div>)
     }
 }

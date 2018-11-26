@@ -2,7 +2,7 @@ import { TODOS_UPDATED, ADD_TODO } from '../actions/types';
 
 const initialState = {
     todos: [],
-    title: null
+    todo: {}
 };
 
 export default function (state = initialState, action) {
@@ -17,17 +17,19 @@ export default function (state = initialState, action) {
             const todos = [...state.todos];
             
             const maxTodoId = Math.max(...todos.map(todos => todos.id));
-
-            todos.push({
+            const todo = {
                 userId: 2,
                 id: maxTodoId + 1,
                 title: action.payload,
                 completed: true
-            });
+            };
+
+            todos.push(todo);
 
             return {
                 ...state,
-                todos
+                todos,
+                todo
             }
         default:
             return state;

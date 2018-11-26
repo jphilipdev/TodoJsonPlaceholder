@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Navigation from './Navigation';
-import ToDoManager from './ToDoManager';
+import TodoManagerContainer from '../containers/TodoManagerContainer';
 import Footer from './Footer';
 
 const LayoutWrapper = styled.div`
@@ -25,7 +25,7 @@ export default class Layout extends Component {
             <LayoutWrapper>
                 <ContentWrapper>
                     <LeftNavigation className="test" />
-                    <ToDoManager />
+                    <TodoManagerContainer />
                 </ContentWrapper>
                 <Footer />
             </LayoutWrapper>
