@@ -4,7 +4,7 @@ export default class TodoComponent extends Component {
 
     render() {
         return (
-            <div onClick={this.props.onClick}>{this.props.children}</div>
+            <div className='todo' onClick={this.props.todoClicked}>{this.props.children}</div>
         );
     }
 }

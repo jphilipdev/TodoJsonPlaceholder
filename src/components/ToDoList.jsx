@@ -14,7 +14,7 @@ export default class ToDoList extends Component {
         this.props.loadTodos();
     }
 
-    onClick = (todoId) => {
+    todoClicked = (todoId) => {
         const todo = this.props.todos.filter(todo => todo.id === todoId)[0];
         this.props.todoSelected(todo);
     }
@@ -25,7 +25,7 @@ export default class ToDoList extends Component {
                 {this.props.todos.map(todo => (
                     <TodoComponent
                         key={todo.id}
-                        onClick={this.onClick.bind(this, todo.id)}
+                        todoClicked={this.todoClicked.bind(this, todo.id)}
                     >
                         {todo.title}
                     </TodoComponent>
