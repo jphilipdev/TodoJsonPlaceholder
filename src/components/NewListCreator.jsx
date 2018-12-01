@@ -13,7 +13,7 @@ export default class NewListCreator extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
 
-    onSubmit = (e) => {
+    addTodo = (e) => {
         e.preventDefault();
         this.props.addTodo(this.state.title);
     };
@@ -22,7 +22,7 @@ export default class NewListCreator extends Component {
         const { title } = this.state;
         return (
             <div>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.addTodo}>
                     <input type='text' name='title' value={title} onChange={this.onChange} />
                     <button type='submit'>Go</button>
                 </form>

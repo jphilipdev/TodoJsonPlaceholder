@@ -16,7 +16,7 @@ export default function (state = initialState, action) {
 
             const todos = [...state.todos];
             
-            const maxTodoId = Math.max(...todos.map(todos => todos.id));
+            const maxTodoId = todos.length == 0 ? 0 : Math.max(...todos.map(todos => todos.id));
             const todo = {
                 userId: 2,
                 id: maxTodoId + 1,
