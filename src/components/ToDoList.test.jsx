@@ -15,6 +15,7 @@ const setup = (propsOverrides) => {
         loadTodos: () => {},
         todoSelected: () => {},
         todos: [],
+        todo: {},
         ...propsOverrides
     };
 

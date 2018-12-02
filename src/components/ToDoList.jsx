@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import TodoComponent from './TodoComponent';
+
+const TodoComponentList = styled.ul`
+    list-style-type: none;
+    padding-left: 0;
+`;
 
 export default class ToDoList extends Component {
 
     static propTypes = {
         todos: PropTypes.array.isRequired,
+        todo: PropTypes.object.isRequired,
         loadTodos: PropTypes.func.isRequired,
         todoSelected: PropTypes.func.isRequired
     };
@@ -21,17 +28,18 @@ export default class ToDoList extends Component {
 
     render() {
         return (
-            <div>
+            <TodoComponentList>
                 {this.props.todos.map(todo => (
                     <TodoComponent
                         key={todo.id}
                         todoClicked={this.todoClicked.bind(this, todo.id)}
+                        todoSelected={this.props.todo === todo}
                     >
                         {todo.title}
                     </TodoComponent>
                 )
                 )}
-            </div>
+            </TodoComponentList>
         )
     }
 }

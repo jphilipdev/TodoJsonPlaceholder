@@ -17,7 +17,8 @@ const ContentWrapper = styled.div`
 `;
 
 const LeftNavigation = styled(Navigation)`
-    min-width: 300px;
+    min-width: ${baseline(20)};
+    margin: ${baseline(1)};
 `;
 
 export default class Layout extends Component {
@@ -26,7 +27,7 @@ export default class Layout extends Component {
         return (
             <LayoutWrapper>
                 <ContentWrapper>
-                    <LeftNavigation className="test" />
+                    <LeftNavigation />
                     <TodoManagerContainer />
                 </ContentWrapper>
                 <Footer />
