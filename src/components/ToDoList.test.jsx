@@ -1,10 +1,7 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import ToDoList from './ToDoList';
 import ToDoComponent from './TodoComponent';
-
-configure({ adapter: new Adapter() });
 
 const loadTodos = jest.fn();
 const todoSelected = jest.fn();
